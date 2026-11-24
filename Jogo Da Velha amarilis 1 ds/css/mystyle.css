@@ -1,0 +1,145 @@
+
+:root {
+    --cor-fundo: rgb(245, 247, 250);
+    --cor-main: rgb(230, 162, 193);
+    --cor-main-dark: rgb(170, 239, 241);
+    --cor-fonte: rgb(255, 255, 255);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+/* Barra de navegação */
+.bg-cor-que-eu-quero {
+    background: var(--cor-main);
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar-nav a {
+    color: var(--cor-fonte);
+}
+
+.navbar-nav a:hover {
+    color: rgb(169, 252, 255);
+}
+
+.navbar-toggler {
+    color: white;
+    border-color: white;
+}
+
+/* Conteúdo principal */
+.principal {
+    display: flex;
+    align-items: center;
+}
+
+#container-top {
+    margin-top: 6rem;
+}
+
+.primary-color {
+    color: var(--cor-main);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Tabuleiro */
+.tabuleiro {
+    width: 27rem;
+    height: 27rem;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.celula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: rgb(214, 255, 252);
+    border: 3px solid var(--cor-main);
+    font-family: Arial, sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--cor-main);
+}
+
+.celula:hover {
+    background: rgb(237, 215, 255);
+}
+
+/* Mensagem do jogo */
+.status {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Botões */
+.btn {
+    border-radius: 5px;
+}
+
+#reset-button {
+    background-color: var(--cor-main);
+    border: none;
+    padding: 0.6rem 1.5rem;
+}
+
+#reset-button:hover {
+    background-color: var(--cor-main-dark);
+}
+
+/* Galeria */
+#slider {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#slider img {
+    height: 27rem;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    .tabuleiro {
+        width: 100%;
+        max-width: 27rem;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .celula {
+        font-size: 3.5rem;
+    }
+
+    #slider img {
+        height: 18rem;
+    }
+
+}
